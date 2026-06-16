@@ -8,9 +8,9 @@
 
 | Service | URL |
 |---|---|
-| 🖥️ Frontend (Vercel) | [https://task-manager-eta-blush.vercel.app](https://task-manager-eta-blush.vercel.app) |
-| ⚙️ Backend API (Render) | [https://task-manager-api-ah5t.onrender.com](https://task-manager-api-ah5t.onrender.com) |
-| 🔍 Health Check | [https://task-manager-api-ah5t.onrender.com/api/health](https://task-manager-api-ah5t.onrender.com/api/health) |
+| 🖥️ Frontend (Railway) | https://dynamic-renewal-production-5759.up.railway.app |
+| ⚙️ Backend API (Railway) | https://task-manager-production-2788.up.railway.app |
+| 🔍 Health Check | https://task-manager-production-2788.up.railway.app/api/health |
 
 ### 🔑 Demo Login Credentials
 ```
@@ -130,8 +130,8 @@ Password: password123
 ### Infrastructure & Deployment
 | Service | Purpose |
 |---|---|
-| Vercel | Frontend hosting (free tier) |
-| Render | Backend hosting (free tier) |
+| Railway | Frontend hosting (free tier) |
+| Railway | Backend hosting (free tier) |
 | Neon | Serverless PostgreSQL (free tier) |
 | GitHub | Version control |
 
@@ -423,20 +423,22 @@ Bob:    bob@demo.com    / password123
 3. Copy the PostgreSQL connection string
 4. Run `npx prisma db push` with that connection string
 
-### Backend — Render (Free)
-1. Create account at render.com
-2. New Web Service → connect GitHub repo
+### Backend — Railway (Free)
+1. Create a new railway service
+2. Connect GitHub repo
 3. Root Directory: `server`
 4. Build Command: `npm install && npx prisma generate`
 5. Start Command: `node src/index.js`
-6. Add environment variables: DATABASE_URL, JWT_SECRET, NODE_ENV=production
+6. Add environment variables: DATABASE_URL, JWT_SECRET, NODE_ENV, PORT
 
-### Frontend — Vercel (Free)
-1. Create account at vercel.com
-2. Import GitHub repo
+### Frontend — Railway (Free)
+1. Create a new railway service
+2. Connect GitHub repo
 3. Root Directory: `client`
-4. Framework: Vite
-5. Add environment variable: VITE_API_URL = your Render URL + /api
+4. Build Command: `npm install && npm run build`
+5. Start Command: `serve -s dist -l$PORT`
+6. Framework: Vite
+7. Add environment variable: VITE_API_URL = your Render URL + /api
 
 ---
 
@@ -461,4 +463,10 @@ Project: https://github.com/arnavdixit25/task-manager
 
 ---
 
-*Built with ❤️ by [Arnav Dixit](https://github.com/arnavdixit25)*
+Built with ❤️ by Arnav Dixit(arnavdixit25)
+
+🚀 Live Frontend:
+https://dynamic-renewal-production-5759.up.railway.app
+
+⚙️ Live Backend:
+https://task-manager-production-2788.up.railway.app
