@@ -2,6 +2,14 @@
 
 > A full-stack project management web application with Kanban boards, real-time task tracking, and team collaboration.
 
+![React](https://img.shields.io/badge/React-18-61DAFB)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF)
+![Node.js](https://img.shields.io/badge/Node.js-24-339933)
+![Express](https://img.shields.io/badge/Express.js-5-black)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Latest-4169E1)
+![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748)
+![Railway](https://img.shields.io/badge/Hosted_on-Railway-7B42BC)
+
 ---
 
 ## 🌐 Live Demo
